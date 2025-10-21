@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         if (!localStorage.getItem("alreadyLoaded")) {
+            localStorage.setItem("redirecting", "true");
+            window.location.href = "loading.html";
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsuki's Odyssey</title>
+    <link rel="icon" type="image/png" href="assets/decor/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Montserrat:wght@600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="script/style.css">
+</head>
+<body>
+    <!-- Web Navbar -->
+    <div class="navbar-web-container navbarweb">
+        <div class="navbar-bg"></div>
+        <img src="assets/decor/logo.png" alt="Logo" class="logo-web">
+        <div class="navbar-web" id="navbarweb">
+            <div class="navbar-web-item active" data-target="home">Home</div>
+            <div class="navbar-web-item" data-target="about">About</div>
+            <div class="navbar-web-item" data-target="character">Character</div>
+            <div class="navbar-web-item" data-target="feature">Feature</div>
+            <div class="navbar-web-item" data-target="news">News</div>
+            <div class="nav-web-underline" id="webUnderline"></div>
+        </div>
+    </div>
+    
+    <!-- Mobile Navbar -->
+     <div class="navbar-mobile-container navbarmobile" id="navbarMobile">
+        <div class="navbar-bg"></div>
+        <img src="assets/decor/logo.png" alt="Logo" class="logo-mobile">
+        <div class="tab-icon" id="tabIcon"></div>
+        <div class="navbar-mobile" id="navbarmobile">
+            <div class="navbar-mobile-item active" data-target="home">Home</div>
+            <div class="navbar-mobile-item" data-target="about">About</div>
+            <div class="navbar-mobile-item" data-target="character">Character</div>
+            <div class="navbar-mobile-item" data-target="feature">Feature</div>
+            <div class="navbar-mobile-item" data-target="news">News</div>
+            <div class="navbar-mobile-item">PlayStore</div>
+            <div class="navbar-mobile-item">AppStore</div>
+        </div>
+    </div>
+
+    <!-- Home -->
+    <div class="container section" id="home">
+        <img src="assets/background/home.jpeg" alt="HomePage" class="background">
+        <div class="menu-bottom"></div>
+        <div class="menu-wrapper" id="menuWrapper">
+            <div class="menu-bg">
+                <div class="icon-list">
+                    <a href="https://www.youtube.com/channel/UCB8LM27oDAHXbGUI9jTqnvQ" target="_blank" rel="noopener noreferrer"><img src="assets/decor/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@hyperbeardgames" target="_blank" rel="noopener noreferrer"><img src="assets/decor/tiktok.png" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/hyperbeardg_/" target="_blank" rel="noopener noreferrer"><img src="assets/decor/instagram.png" alt="Instagram"></a>
+                    <a href="https://twitter.com/hyperbeard" target="_blank" rel="noopener noreferrer"><img src="assets/decor/x.png" alt="X" class="icon-x"></a>
+                    <a href="https://www.facebook.com/HyperBeardGames/" target="_blank" rel="noopener noreferrer"><img src="assets/decor/facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <img src="assets/decor/menu.png" alt="Social">
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.hyperbeard.odyssey&hl=en&gl=US" target="_blank" rel="noopener noreferrer"><img class="menu-store google" src="assets/decor/google.png" alt="Google Play"></a>
+        <a href="https://apps.apple.com/by/app/tsukis-odyssey/id1564146071" target="_blank" rel="noopener noreferrer"><img class="menu-store app" src="assets/decor/app.png" alt="App Store"></a>
+    </div>
+
+    <!-- About -->
+    <div class="container section" id="about">
+        <img src="assets/background/about.jpeg" alt="AboutPage" class="background">
+        <div class="shadow"></div>
+        <div class="about-text">
+			<p>Tsuki’s Odyssey is a passive adventure game that immerses you into the world of Tsuki and the oddball characters of Mushroom Village.</p>
+			<p>It is important to note that Tsuki is not your pet, but a free spirit who will move and interact with the world as they please. But if you check in often, you just might catch something new and exciting happening in the town!</p>
+		</div>
+    </div>
+
+    <!-- Character -->
+    <div class="container section" id="character">
+        <img src="assets/background/character.jpeg" alt="CharacterPage" class="background">
+        <div class="character-wrapper">
+			<div class="char-section">
+                <!-- Top -->
+				<div class="char-row">
+					<div class="char-card"><img src="assets/character/tsuki.png" alt="Tsuki"></div>
+					<div class="char-card"><img src="assets/character/benny.png" alt="Benny"></div>
+					<div class="char-card"><img src="assets/character/bobo.png" alt="Bobo"></div>
+					<div class="char-card"><img src="assets/character/camille.png" alt="Camille"></div>
+					<div class="char-card"><img src="assets/character/chi.png" alt="Chi"></div>
+					<div class="char-card"><img src="assets/character/dawn.png" alt="Dawn"></div>
+					<div class="char-card"><img src="assets/character/draper.png" alt="Draper"></div>
+					<div class="char-card"><img src="assets/character/elfie.png" alt="Elfie"></div>
+					<div class="char-card"><img src="assets/character/floyd.png" alt="Floyd"></div>
+					<div class="char-card"><img src="assets/character/gecko.png" alt="Gecko"></div>
+					<div class="char-card"><img src="assets/character/ken.png" alt="Ken"></div>
+					<div class="char-card"><img src="assets/character/moca.png" alt="Moca"></div>
+					<!-- Duplicate -->
+					<div class="char-card"><img src="assets/character/tsuki.png" alt="Tsuki"></div>
+					<div class="char-card"><img src="assets/character/benny.png" alt="Benny"></div>
+					<div class="char-card"><img src="assets/character/bobo.png" alt="Bobo"></div>
+					<div class="char-card"><img src="assets/character/camille.png" alt="Camille"></div>
+					<div class="char-card"><img src="assets/character/chi.png" alt="Chi"></div>
+					<div class="char-card"><img src="assets/character/dawn.png" alt="Dawn"></div>
+					<div class="char-card"><img src="assets/character/draper.png" alt="Draper"></div>
+					<div class="char-card"><img src="assets/character/elfie.png" alt="Elfie"></div>
+					<div class="char-card"><img src="assets/character/floyd.png" alt="Floyd"></div>
+					<div class="char-card"><img src="assets/character/gecko.png" alt="Gecko"></div>
+					<div class="char-card"><img src="assets/character/ken.png" alt="Ken"></div>
+					<div class="char-card"><img src="assets/character/moca.png" alt="Moca"></div>
+				</div>
+				<!-- Bottom -->
+				<div class="char-row reverse">
+					<div class="char-card"><img src="assets/character/momo.png" alt="Momo"></div>
+					<div class="char-card"><img src="assets/character/olson.png" alt="Olson"></div>
+					<div class="char-card"><img src="assets/character/paige.png" alt="Paige"></div>
+					<div class="char-card"><img src="assets/character/pipi.png" alt="Pipi"></div>
+					<div class="char-card"><img src="assets/character/pot.png" alt="Pot"></div>
+					<div class="char-card"><img src="assets/character/ratthew.png" alt="Ratthew"></div>
+					<div class="char-card"><img src="assets/character/rosemary.png" alt="Rosemary"></div>
+					<div class="char-card"><img src="assets/character/scarlett.png" alt="Scarlett"></div>
+					<div class="char-card"><img src="assets/character/sly.png" alt="Sly"></div>
+					<div class="char-card"><img src="assets/character/yori.png" alt="Yori"></div>
+					<div class="char-card"><img src="assets/character/rudolph.png" alt="Rudolph"></div>
+					<div class="char-card"><img src="assets/character/tofu.png" alt="Tofu"></div>
+					<!-- Duplicate -->
+					<div class="char-card"><img src="assets/character/momo.png" alt="Momo"></div>
+					<div class="char-card"><img src="assets/character/olson.png" alt="Olson"></div>
+					<div class="char-card"><img src="assets/character/paige.png" alt="Paige"></div>
+					<div class="char-card"><img src="assets/character/pipi.png" alt="Pipi"></div>
+					<div class="char-card"><img src="assets/character/pot.png" alt="Pot"></div>
+					<div class="char-card"><img src="assets/character/ratthew.png" alt="Ratthew"></div>
+					<div class="char-card"><img src="assets/character/rosemary.png" alt="Rosemary"></div>
+					<div class="char-card"><img src="assets/character/scarlett.png" alt="Scarlett"></div>
+					<div class="char-card"><img src="assets/character/sly.png" alt="Sly"></div>
+					<div class="char-card"><img src="assets/character/yori.png" alt="Yori"></div>
+					<div class="char-card"><img src="assets/character/rudolph.png" alt="Rudolph"></div>
+					<div class="char-card"><img src="assets/character/tofu.png" alt="Tofu"></div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <!-- Feature -->
+    <div class="web">
+		<div class="container section" id="feature">
+			<img src="assets/background/feature.jpeg" class="background">
+			<div class="shadow-feature"></div>
+			<div class="slider-wrapper" id="sliderWeb">
+				<div class="page page1">
+					<img class="feature" src="assets/background/decorate.png">
+					<img class="feature" src="assets/background/explore.png">
+					<img class="feature" src="assets/background/photo.png">
+				</div>
+				<div class="page page2">
+					<img class="feature" src="assets/background/fishing.png">
+					<img class="feature" src="assets/background/farm.png">
+					<img class="feature" src="assets/background/socialize.png">
+				</div>
+			</div>
+			<img class="decor" src="assets/decor/decor.png">
+			<img class="next-button" id="nextWeb" src="assets/decor/right.png">
+			<img class="prev-button" id="prevWeb" src="assets/decor/left.png">
+		</div>
+	</div>
+
+	<div class="mobile">
+		<div class="container" id="feature-mobile">
+			<img src="assets/background/feature.jpeg" class="background">
+			<div class="shadow-feature"></div>
+			<div class="slider-wrapper-mobile" id="sliderMobile">
+				<div class="page-mobile"><img class="feature-mobile" src="assets/background/decorate.png"></div>
+				<div class="page-mobile"><img class="feature-mobile" src="assets/background/explore.png"></div>
+				<div class="page-mobile"><img class="feature-mobile" src="assets/background/photo.png"></div>
+				<div class="page-mobile"><img class="feature-mobile" src="assets/background/fishing.png"></div>
+				<div class="page-mobile"><img class="feature-mobile" src="assets/background/farm.png"></div>
+				<div class="page-mobile"><img class="feature-mobile" src="assets/background/socialize.png"></div>
+			</div>
+			<img class="decor" src="assets/decor/decor.png">
+			<img class="next-button" id="nextMobile" src="assets/decor/right.png">
+			<img class="prev-button" id="prevMobile" src="assets/decor/left.png">
+		</div>
+	</div>
+
+    <!-- News -->
+    <div class="container section" id="news">
+        <img src="assets/background/news.jpeg" alt="NewsPage" class="background">
+        <div class="shadow"></div>
+        
+        <div class="news-header">
+            <div class="news-title">Upcoming Event</div>
+            <img class="news-image" src="assets/decor/halloween.png" alt="Halloween">
+        </div>
+        
+        <div class="event-container">
+            <div class="event-box">
+                <img src="assets/background/halloween.png" alt="Event Image">
+                <div class="event-details">
+                    <div class="event-title">Halloween</div>
+                    <div class="label">Start</div>
+                    <div class="value">October 16, 2025</div>
+                    <div class="label">End</div>
+                    <div class="value">November 1, 2025</div>
+                    <div class="event-button">
+                        <img src="assets/decor/detail.png" alt="Detail Button">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-text">
+            Copyright © HyperBeard, Inc. 2019-2024. All Rights Reserved
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
