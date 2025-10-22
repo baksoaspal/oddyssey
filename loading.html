@@ -6,6 +6,7 @@
 	<title>Tsuki's Odyssey</title>
 	<link rel="icon" type="image/png" href="assets/decor/icon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&display=swap" rel="stylesheet">
+
 	<style>
 		* { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -78,59 +79,48 @@
 <body>
 	<div class="container">
 		<div class="center" id="center">
-			<img src="assets/decor/carrot.png" class="carrot" id="carrot">
+			<img src="assets/decor/carrot.png" class="carrot" id="carrot" alt="Carrot">
 			<div class="progress" id="progress-text">0%</div>
 		</div>
 	</div>
 
 	<script>
-		const lastLoadTime = localStorage.getItem("lastLoadTime");
-		const cooldown = 1000 * 60 * 10; 
+		const container = document.querySelector('.container');
+		const center = document.getElementById('center');
+		const progressText = document.getElementById('progress-text');
+		let progress = 0;
 
-		if (!lastLoadTime || Date.now() - lastLoadTime > cooldown) {
-			localStorage.setItem("redirecting", "true");
+		const loadingInterval = setInterval(() => {
+			progress++;
+			progressText.textContent = `${progress}%`;
 
-			const container = document.querySelector('.container');
-			const center = document.getElementById('center');
-			const progressText = document.getElementById('progress-text');
-			let progress = 0;
+			if (progress >= 100) {
+				clearInterval(loadingInterval);
+				setTimeout(() => {
+					progressText.style.opacity = '0';
+					center.style.transform = 'translateY(-150vh)';
+					document.body.style.transform = 'translateY(-100vh)';
 
-			const loadingInterval = setInterval(() => {
-				progress++;
-				progressText.textContent = `${progress}%`;
-
-				if (progress >= 100) {
-					clearInterval(loadingInterval);
 					setTimeout(() => {
-						progressText.style.opacity = '0';
-						center.style.transform = 'translateY(-150vh)';
-						document.body.style.transform = 'translateY(-100vh)';
-
-						setTimeout(() => {
-							localStorage.setItem("lastLoadTime", Date.now());
-							localStorage.removeItem("redirecting");
-							window.location.href = "index.html";
-						}, 1200);
-					}, 500);
-				}
-			}, 60);
-
-			function createBubble() {
-				const bubble = document.createElement('div');
-				const size = Math.random() * 20 + 10;
-				bubble.classList.add('bubble');
-				bubble.style.width = `${size}px`;
-				bubble.style.height = `${size}px`;
-				bubble.style.left = `${Math.random() * 100}%`;
-				bubble.style.animationDuration = `${Math.random() * 6 + 9}s`;
-				container.appendChild(bubble);
-				setTimeout(() => bubble.remove(), 16000);
+						window.location.href = "index.html?from=loading";
+					}, 1200);
+				}, 2000);
 			}
-			setInterval(createBubble, 900);
+		}, 80);
 
-		} else {
-			window.location.replace("index.html");
+		function createBubble() {
+			const bubble = document.createElement('div');
+			const size = Math.random() * 20 + 10;
+			bubble.classList.add('bubble');
+			bubble.style.width = `${size}px`;
+			bubble.style.height = `${size}px`;
+			bubble.style.left = `${Math.random() * 100}%`;
+			bubble.style.animationDuration = `${Math.random() * 6 + 9}s`;
+			container.appendChild(bubble);
+			setTimeout(() => bubble.remove(), 16000);
 		}
-</script>
+
+		setInterval(createBubble, 900);
+	</script>
 </body>
 </html>

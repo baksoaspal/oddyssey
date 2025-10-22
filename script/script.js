@@ -1,3 +1,17 @@
+window.addEventListener("DOMContentLoaded", () => {
+	const params = new URLSearchParams(window.location.search);
+	const fromLoading = params.get("from");
+
+	if (!fromLoading) {
+		window.location.href = "./loading.html";
+		return;
+	}
+
+	if (fromLoading === "loading") {
+		const cleanURL = window.location.origin + window.location.pathname;
+		window.history.replaceState({}, document.title, cleanURL);
+	}
+});
 const tabIcon = document.getElementById('tabIcon');
 const navbar = document.getElementById('navbarMobile');
 
